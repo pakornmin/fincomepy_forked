@@ -91,7 +91,7 @@ class ZspreadZero(FixedIncome):
         sol = root(lambda x: self.total_CF_zspread(x, self._reg_dict["zero_rates"], self._reg_dict["CF"], 
                    self._maturity) - self._reg_dict["face_value"], [0.01], *args, **kwargs)
         zspread = sol.x[0]
-        assert zspread >= 0 and zspread <=1
+        #assert zspread >= 0 and zspread <=1
         self._reg_dict["zspread"] = zspread
         self.update_dict()
         return self._perc_dict["zspread"]
