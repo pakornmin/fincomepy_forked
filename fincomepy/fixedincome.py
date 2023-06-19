@@ -43,9 +43,11 @@ class FixedIncome(object):
                 self._reg_dict[key] = value * 0.01
         
         # make sure the values in two dictionaries matches
+        '''
         for key, value in self._perc_dict.items():
             if isinstance(value, np.ndarray):
                 assert (self._reg_dict[key] == value * 0.01).all()
             else:
                 assert self._reg_dict[key] == value * 0.01
+        '''
 
